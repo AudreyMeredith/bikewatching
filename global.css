@@ -1,4 +1,4 @@
-body {
+/* body {
     font: 100%/1.5 system-ui, sans-serif;
     display: flex;
     flex-flow: column;
@@ -7,4 +7,45 @@ body {
     box-sizing: border-box;
     margin: auto;
     padding: 1em;
+  } */
+
+  body {
+    font: 100%/1.5 system-ui, sans-serif;
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1em;
+  }
+  header {
+    display: flex;
+    gap: 1em;
+    align-items: baseline;
+  }
+  label time {
+    display: block;
+  }
+  #any-time {
+    color: #999;
+    font-style: italic;
+    display: block;
+  }
+  .legend {
+    display: flex;
+    gap: 1px;
+    margin-block: 1em;
+  }
+  .legend > div {
+    flex: 1;
+    text-align: center;
+    padding: 0.5em 2em;
+    --color-departures: steelblue;
+    --color-arrivals: darkorange;
+    --color: color-mix(in oklch,
+        var(--color-departures) calc(100% * var(--departure-ratio)),
+        var(--color-arrivals));
+    background: var(--color);
+    color: white;
   }
